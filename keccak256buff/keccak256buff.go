@@ -27,7 +27,7 @@ func (x *EasyKeccak256) init() {
 
 	(*x).poolx = new(sync.Pool)
 	(*x).poolx.New = func() interface{} {
-		kek256 := sha3.NewLegacyKeccak512()
+		kek256 := sha3.NewLegacyKeccak256()
 
 		return &kek256
 	}
